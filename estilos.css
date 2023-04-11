@@ -1,0 +1,83 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul{
+    list-style: none ;
+    width: 200px;
+    margin: 0;
+    padding: 4;
+}
+
+ul li{
+    color: white;
+    padding: 4px;
+    text-align: center;
+    border-bottom: 2px solid rgb(38, 27, 129);
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    background-color: blueviolet;
+    transition: all 0.3s;
+    
+}
+/* el simbolo : nos sirve para especificar comportamientos en el caso de
+first-child o last-child daran estilos a lemenetos hijos como
+primer item de una lista, ultima columna */
+ul li:first-child{
+    border-top: 2px solid black;
+}
+/* solo se activa cuando pasemos el maus por encima del elemento
+ que estamos definiendio */
+ul li:hover{
+    cursor: pointer;
+    background-color: rgb(156, 73, 233);
+    font-size: 20px;
+    transform: scale(1.1);
+    border-top: 2px solid rgb(156, 73, 233);
+    box-shadow: 5px 5px 5px rgb(61, 33, 94);
+}
+
+ul.menu{
+    width: 100%;
+    float: left;
+}
+
+ul.menu li{
+    float: left;
+    border-left: 2px solid rgb(74, 26, 119);
+    border-bottom: 2px solid rgb(74, 26, 119);
+    border-top: 2px solid rgb(74, 26, 119);
+    border-right: none;
+}
+
+ul.menu li:last-child{
+    border-right: 2px solid rgb(74, 26, 119);
+}
+
+ul.menu li:hover{
+    border-right: 2px solid rgb(74, 26, 119);
+}
+
+@media(max-width: 350px) {
+    
+    ul.menu{
+        width: 200px;
+        float: none;
+    }
+
+    ul.menu li{
+        float: none;
+        
+    }
+
+    ul.menu li:first-child{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    ul.menu li:last-child{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+}
